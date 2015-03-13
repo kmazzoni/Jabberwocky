@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Jabberwocky.Glass</id>
+    <version>0.9-alpha</version>
+    <title>Jabberwocky Glass</title>
+    <authors>Chris Smith</authors>
+    <owners>Velir, Chris Smith</owners>
+    <projectUrl>https://github.com/Velir/Jabberwocky</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Jabberwocky Glass</description>
+    <releaseNotes>Alpha build</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>Velir Jabberwocky Glass</tags>
+  </metadata>
+</package>
