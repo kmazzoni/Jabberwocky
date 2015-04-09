@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Jabberwocky.Glass.Autofac.Mvc</id>
-    <version>0.9-alpha</version>
+    <version>0.9.0.1-alpha</version>
     <title>Jabberwocky Glass and Autofac with MVC</title>
     <authors>Chris Smith</authors>
     <owners>Velir, Chris Smith</owners>

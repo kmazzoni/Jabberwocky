@@ -56,7 +56,6 @@ _ReSharper*/
 
 #NuGet
 packages/
-*.nupkg
 
 #ncrunch
 *ncrunch*
