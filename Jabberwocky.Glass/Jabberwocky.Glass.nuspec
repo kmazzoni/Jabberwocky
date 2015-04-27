@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Jabberwocky.Glass</id>
-    <version>0.9-alpha</version>
+    <version>0.9.0.1-alpha</version>
     <title>Jabberwocky Glass</title>
     <authors>Chris Smith</authors>
     <owners>Velir, Chris Smith</owners>
@@ -13,4 +13,8 @@
     <copyright>Copyright 2015</copyright>
     <tags>Velir Jabberwocky Glass</tags>
   </metadata>
+  
+  <files>
+    <file src="App_Config\Include\Jabberwocky.Glass.config" target="content\App_Config\Include\Jabberwocky.Glass.config" />
+  </files>
 </package>
