@@ -5,6 +5,7 @@ using Glass.Mapper.Sc;
 using Glass.Mapper.Sc.Configuration.Attributes;
 using Jabberwocky.Glass.Factory;
 using Jabberwocky.Glass.Factory.Attributes;
+using Jabberwocky.Glass.Factory.Caching;
 using Jabberwocky.Glass.Factory.Implementation;
 using Jabberwocky.Glass.Factory.Interceptors;
 using Jabberwocky.Glass.Factory.Util;
@@ -19,6 +20,7 @@ namespace Jabberwocky.Glass.Tests.Factory
 	{
 		private ISitecoreService _mockService;
 		private IImplementationFactory _implFactory;
+		private IGlassTemplateCacheService _templateCache;
 
 		private ILookup<Type, GlassInterfaceMetadata> _interfaceMappings;
 
@@ -33,7 +35,7 @@ namespace Jabberwocky.Glass.Tests.Factory
 		public void Initialize()
 		{
 			_mockService = Substitute.For<ISitecoreService>();
-			
+
 			var typeDictionary = new Dictionary<Type, IEnumerable<GlassInterfaceMetadata>>
 			{
 				// Type of Glass Factory Interface (and associated 'abstract' implementations)
@@ -64,10 +66,12 @@ namespace Jabberwocky.Glass.Tests.Factory
 				.ToLookup(pair => pair.Key, pair => pair.Value);
 
 			// Tightly-coupled test dependency... hmm
-			_implFactory = new ProxyImplementationFactory((t, model) => new FallbackInterceptor(t, model, _glassFactory, _implFactory, _mockService));
+			_implFactory = new ProxyImplementationFactory((t, model) => new FallbackInterceptor(t, model, _glassFactory.TemplateCacheService, _implFactory, _mockService));
+
+			_templateCache = new GlassTemplateCacheService(_interfaceMappings, () => _mockService);
 
 			// System Under Test
-			_glassFactory = new GlassInterfaceFactory(_interfaceMappings, _implFactory, () => _mockService);
+			_glassFactory = new GlassInterfaceFactory(_templateCache, _implFactory);
 		}
 
 		[Test]
@@ -227,16 +231,10 @@ namespace Jabberwocky.Glass.Tests.Factory
 		{
 			public abstract bool IsFallback { get; }
 
-			public bool IsNotFallback
-			{
-				get { return true; }
-			}
+			public bool IsNotFallback => true;
 
 			// Important for test: must be marked virtual
-			public virtual bool VirtualIsNotFallback
-			{
-				get { return true; }
-			}
+			public virtual bool VirtualIsNotFallback => true;
 
 			// Important for test: must be marked virtual
 			public virtual object VirtualNotImplementedMethod()
@@ -262,10 +260,7 @@ namespace Jabberwocky.Glass.Tests.Factory
 				_innerItem = innerItem;
 			}
 
-			public bool IsFallback
-			{
-				get { return true; }
-			}
+			public bool IsFallback => true;
 
 			public abstract bool IsNotFallback { get; }
 			public abstract bool VirtualIsNotFallback { get; }
