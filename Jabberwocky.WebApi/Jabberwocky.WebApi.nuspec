@@ -1,20 +1,16 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Jabberwocky.Glass.Autofac.Mvc</id>
+    <id>Jabberwocky.WebApi</id>
     <version>$version$-alpha</version>
-    <title>Jabberwocky Glass and Autofac with MVC</title>
+    <title>Jabberwocky WebApi</title>
     <authors>Chris Smith</authors>
     <owners>Velir, Chris Smith</owners>
     <projectUrl>https://github.com/Velir/Jabberwocky</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Jabberwocky Glass and Autofac with MVC</description>
+    <description>Jabberwocky WebApi</description>
     <releaseNotes>Alpha build</releaseNotes>
     <copyright>Copyright 2015</copyright>
-    <tags>Velir Jabberwocky Glass Autofac MVC</tags>
+    <tags>Velir Jabberwocky WebApi</tags>
   </metadata>
-
-  <files>
-    <file src="App_Config\Include\Jabberwocky.Glass.Autofac.Mvc.config" target="content\App_Config\Include\Jabberwocky.Glass.Autofac.Mvc.config" />
-  </files>
 </package>
