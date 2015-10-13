@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>Jabberwocky.Glass.Autofac</id>
-    <version>$version$-alpha</version>
+    <version>$version$</version>
     <title>Jabberwocky Glass and Autofac</title>
     <authors>Chris Smith</authors>
     <owners>Velir, Chris Smith</owners>
     <projectUrl>https://github.com/Velir/Jabberwocky</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Jabberwocky Glass and Autofac</description>
-    <releaseNotes>Alpha build</releaseNotes>
+    <releaseNotes>RTM</releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>Velir Jabberwocky Glass Autofac</tags>
   </metadata>
