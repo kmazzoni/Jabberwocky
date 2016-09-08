@@ -1,6 +1,7 @@
 .nuget\NuGet.exe pack Jabberwocky.Core/Jabberwocky.Core.csproj -IncludeReferencedProjects -symbols -Prop Configuration=Release
 .nuget\NuGet.exe pack Jabberwocky.Glass/Jabberwocky.Glass.csproj -IncludeReferencedProjects -symbols -Prop Configuration=Release
 .nuget\NuGet.exe pack Jabberwocky.Glass.Autofac/Jabberwocky.Glass.Autofac.csproj -IncludeReferencedProjects -symbols -Prop Configuration=Release
+.nuget\NuGet.exe pack Jabberwocky.Glass.Mvc/Jabberwocky.Glass.Mvc.csproj -IncludeReferencedProjects -symbols -Prop Configuration=Release
 .nuget\NuGet.exe pack Jabberwocky.Glass.Autofac.Mvc/Jabberwocky.Glass.Autofac.Mvc.csproj -IncludeReferencedProjects -symbols -Prop Configuration=Release
 .nuget\NuGet.exe pack Jabberwocky.Glass.Autofac.WebApi/Jabberwocky.Glass.Autofac.WebApi.csproj -IncludeReferencedProjects -symbols -Prop Configuration=Release
 .nuget\NuGet.exe pack Jabberwocky.WebApi/Jabberwocky.WebApi.csproj -IncludeReferencedProjects -symbols -Prop Configuration=Release
