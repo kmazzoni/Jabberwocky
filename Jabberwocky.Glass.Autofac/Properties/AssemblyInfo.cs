@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Velir")]
 [assembly: AssemblyProduct("Jabberwocky.Glass.Autofac")]
-[assembly: AssemblyCopyright("Copyright © Velir 2015")]
+[assembly: AssemblyCopyright("Copyright © Velir 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
